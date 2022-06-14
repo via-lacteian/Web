@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kdam+Thmor+Pro&display=swap');
+
+
+/*Size of bg image container*/
+.demoB{
+    height: 100vh;
+    width: 100vw;
+}
+
+.demoB{
+    position: relative;
+}
+
+.backB, .frontB{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.backB{
+    z-index: 1;
+}
+.frontB{
+    z-index: 2;
+}
+.logoB{
+    z-index: 2;
+}
+
+/* Blurred bg image*/
+.backB{
+    background: url("unirajbg.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+
+}
+
+/*Front text*/
+.frontB{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    color: black;
+    font-size: 2.8rem;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+/* logo image*/
+.logoB{
+    position: relative;
+    -webkit-clip-path: circle(50% at 50% 50%) ;
+    width: 135px;
+    top: 10%;
+    left: 45%;
+}
+
+#headpre{
+    background: none;
+}
+
+#acessuni{
+    font-size: 22px;
+    font-family: monospace;
+}
+
+
+.iframetext{
+    text-align: center;
+
+}
+
+iframe{
+  display:block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-left: 65px;
+  width: 88vw;
+  height: 500px;
+  margin-bottom: 15px;
+}
+
+
+iframe:hover{
+      box-shadow: 0 4px 8px 0 yellowgreen, 0 6px 20px 0 lightgreen;
+
+
+}
+
+#intro{
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+}
+
+pre{
+    text-align: left;
+    background: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    padding-left: 3px;
+    color: black;
+}
+
+.startdiv{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 grey;
+    border-radius: 2px;
+    width: 90;
+    margin-left: 25px;
+    margin-right: 20px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+
+.startdiv:hover{
+    transition: .3s;
+    box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 green;
+}
+
+.siteb{
+    display: grid;
+    justify-content: center;
+}
+
+button{
+    color:white;
+    margin-top: 3px;
+    background: red;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+button:hover{
+    background: green;
+    transition: 4ms;
+    box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 green;
+
+}
+
+#siteb1{
+    padding-right: 22.5px;
+}
+
+#site2{
+    margin-bottom: 5px;
+}
+
+

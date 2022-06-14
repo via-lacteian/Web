@@ -1,0 +1,395 @@
+/* Importing Google Fonts! */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kdam+Thmor+Pro&family=Lato:wght@900&family=Tangerine:wght@700&display=swap');
+
+/* Gives styles for all elements */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Giving styles for body elements! */
+
+body{
+
+    /*font-family: 'Kdam Thmor Pro', sans-serif;*/
+    /*background: radial-gradient(skyblue,#5b5d5e);*/
+    line-height: 1.6;
+    height: 100vh;
+
+}
+
+
+/* Main Container for Sections */
+  .container{
+
+    width: 100;
+    height: 100;
+    /*Smooth scroll*/
+    overflow-y: scroll ;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+
+/* Defining the navigation bar*/
+
+/* div .navbar for site naviagtion bar */
+.navbar{
+  overflow: hidden;
+  background-color: rgb(14, 118, 173,2.5);
+}
+
+/* nabar a for items inside the navigations bar*/
+
+.navbar a{
+  float: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* dropdown divisions for navigation bar */
+
+.dropdown{
+  margin-top: 2.7px;
+  padding-right: 5px;
+  float: left;
+  overflow: hidden;
+}
+
+/* Button to dropdown navigation */
+
+.dropdown .dropbtn{
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+/* Hover animations for navbar a and dropbtn and dropdown*/
+
+.navbar a:hover, .dropdown:hover .dropbtn{
+  background-color: #AD7C5D;
+}
+
+/* Defining Dropdown Content Styles*/
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a{
+  float: none;
+  font-size: 16px;
+  padding: 14px 16px;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+
+}
+
+
+/* defining sections for page*/
+
+/* Head one for main heading and scroll instrucitons icon */
+
+.head1{
+    background-image: url("geosickblur.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center ;
+    width: 100%;
+    height: 100vh;
+    font-size: 5.2vw;
+    scroll-snap-align: center;
+}
+
+.head1 h1{
+    font-family:'Bebas Neue', cursive;
+    color: white;
+    font-size: 5.2vw;
+    animation: glow 1.7s ease-in-out infinite alternate,netflix_style 4.1s;
+}
+
+.head1 p{
+
+    color: white;
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 30vh;
+    left: 43vw;
+    animation: fadeIn ease 2.8s;
+
+}
+
+/* Defining divison for icon of scrolling*/
+
+.head1 .icon-scroll {
+  width: 20px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 10vh;
+  left: 48vw;
+  animation: fadeIn ease 2.8s;;
+  box-shadow: 3px 3px 5px -5px white;
+}
+
+.head1 .icon-scroll::before {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background: white;
+  border-radius:  100px;
+  position: absolute;
+  left: 8px;
+  animation: fadeIn ease 2.8s;
+  bottom: 16px;
+}
+
+.head1 .icon-scroll::after {
+  content: "";
+  width: 4px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  left: 8px;
+  display: block;
+  animation: scroll ease 1.0s infinite,fadeIn ease 2.0s;
+}
+
+/*Netflix Animation for Main heading text of the page*/
+
+@keyframes netflix_style {
+  0% {
+    color: #AD7C5D;  
+  }
+  10% {
+
+    color: #AD7C5D;  
+  }
+    20% {
+
+    color: white;  
+    }
+  40%{
+    
+    color: #f3f3f3;
+  }
+
+  50% {
+    color: #f3f3f3;
+  }
+  60% {
+    color: white;
+    text-shadow: none;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+
+/* Glow animaton for main text */
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px black;
+    }
+    to {
+      text-shadow: 0 0 30px blue, 0 0 10px red;
+    }
+  }
+
+
+/* styles and animation for scroller Instructions */
+
+@keyframes scroll {
+  from {
+    top: 5px;
+  }
+  to {
+    top: 18px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Fade in animation for scroller insturctions*/
+
+@keyframes fadeIn {
+    0% { 
+      opacity: 0;
+    }
+    5%{
+      opacity: 0;
+    }
+    60%{
+      opacity: 8;
+    }
+    100% { 
+      opacity: 1;
+    }
+  }
+
+
+
+
+/* Defining For section two namely .uni-info */
+.uni-info{
+    background: radial-gradient(#CDCCC9,#AD7C5D);
+    display: flex;
+    scroll-snap-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-size: 1vw;
+}
+
+/* Image cards in section 2*/
+
+/* Card Elemnts storage area is inside the divison .maincrad */
+
+/* Divison of card area to store card elements */
+
+.uni-info-card{
+  width: 27%;
+  color: yellow;
+  display: inline-block;
+  background: radial-gradient(teal,#AD7C5D);
+  border-radius: 14px;
+  margin: 40px;
+  box-shadow: 5px 5px 15px black;
+
+}
+
+.uni-info-card:hover{
+    box-shadow: 6px 6px 18px yellowgreen;
+    transition: .35s;
+
+}
+
+.logo img{
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  width: 100%;
+}
+
+.t{
+  text-align: center;
+  padding: 2px;
+}
+
+.des a,.des p {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.des button{
+  font-family: monospace;
+  color: black;
+  font-weight: bolder;
+  margin-top: 4px;
+  margin-bottom: 8px ;
+  background-color: skyblue;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.des button:hover{
+  background-color: red;
+  color: white;
+  transition: .15s;
+}
+
+/* Styles for footer */
+
+footer{
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  background-color: #AD7C5D;
+  color: white;
+  box-shadow: 5px 5px 15px black;
+
+}
+
+/* Footer button  styles and Heartbeat animation*/
+
+#Showsomelove{
+  border: 1.5px solid black ;
+  border-radius: 5px;
+  margin-top: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-bottom: 3px;
+  width: 190px;
+  height: 34px;
+}
+
+#Showsomelove{
+  background-color: red;
+  animation: beat .50s infinite alternate;
+  color: white;
+  transition: .1s;
+}
+
+@keyframes beat{
+	to { transform: scale(.75); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
